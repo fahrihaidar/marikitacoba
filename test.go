@@ -11,18 +11,18 @@ import (
 )
 
 func main() {
-	//connect to postgresql
+
 	db, err := config.Setup()
 	if err != nil {
 		log.Panic(err)
 		return
 	}
 	fmt.Println("Connected")
-	// migrate models inside project
+
 	db.AutoMigrate(models.Payment{})
 	fmt.Println("Migrated")
 
-	// create a payment
+	
 	payment := models.Payment{
 		PaymentCode: "XXX-1",
 		Name:        "Payment for item #1",
@@ -36,7 +36,7 @@ func main() {
 	}
 	fmt.Println("Payment created", result)
 
-	// select a payment
+	
 	var id string
 	fmt.Println("Input payment id : ")
 	fmt.Scanln(&id)
@@ -44,13 +44,13 @@ func main() {
 	payment, _ = SelectPaymentWIthId(db, id)
 	fmt.Println("Your payment is", payment)
 
-	// update a payment with previous id
+	
 	updatedPayment, _ := UpdatePayment(db, id, models.Payment{
 		Status: "PAID",
 	})
 	fmt.Println("Your payment status now is ", updatedPayment)
 
-	// delete a payment with previous id
+	
 	DeletePayment(db, id)
 	fmt.Println("Your payment now is deleted")
 }
