@@ -1,0 +1,22 @@
+Daftar fitur :
+Proses Loan Application : Personal Loan
+
+User :
+NoAnggota : BIGINT
+Nama : VARCHAR
+Alamat : VARCHAR
+Notlp : INT
+Umur : INT
+Jeniskl : VARCHAR
+
+Admin (Pinjaman) :
+NoPinjaman : INT
+NoAnggota : INT
+JmlPinjaman : BIGINT
+TglPinjam : INT
+
+Payment (Angsuran) :
+ID          INT primaryKey
+PaymentCode VARCHAR
+Name        VARCHAR
+Status      VARCHAR
