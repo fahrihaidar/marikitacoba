@@ -3,4 +3,4 @@ Daftar fitur :
 1. User dapat mengajukan pinjaman
 2. User dapat memasukkan data
 4. Petugas dapat menerima data dari User
-5. Petugas dapat mengubah,menghapus,memasukkan data
+5. Petugas dapat mengubah,menghapus,memasukkan data Payment (Angsuran)

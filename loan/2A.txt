@@ -2,21 +2,22 @@ Daftar fitur :
 Proses Loan Application : Personal Loan
 
 User :
-NoAnggota : BIGINT
-Nama : VARCHAR
-Alamat : VARCHAR
-Notlp : INT
-Umur : INT
-Jeniskl : VARCHAR
+ID_Anggota  : BIGINT primaryKey
+Nama        : VARCHAR
+Alamat      : VARCHAR
+Notlp       : INT
+Umur        : INT
+Jeniskl     : VARCHAR
 
-Admin (Pinjaman) :
-NoPinjaman : INT
-NoAnggota : INT
-JmlPinjaman : BIGINT
-TglPinjam : INT
+Peminjaman :
+ID_Peminjaman   : INT primaryKey
+ID_Anggota      : INT FK
+JmlPinjaman     : BIGINT
+TglPinjam       : INT
+JmlAngs         : INT
 
 Payment (Angsuran) :
-ID          INT primaryKey
-PaymentCode VARCHAR
-Name        VARCHAR
-Status      VARCHAR
+ID          : INT primaryKey
+PaymentCode : VARCHAR
+Name        : VARCHAR
+Status      : VARCHAR
