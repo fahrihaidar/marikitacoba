@@ -18,6 +18,7 @@ JmlAngs         : INT
 
 Payment (Angsuran) :
 ID          : INT primaryKey
+ID_Anggota  : INT FK
 PaymentCode : VARCHAR
 Name        : VARCHAR
 Status      : VARCHAR
